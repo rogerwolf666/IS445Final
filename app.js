@@ -18,13 +18,13 @@ formElement.addEventListener("submit", e => {
     large = numTwo
   }
  
-  if(isNaN(numTwo)){document.getElementById("output").innerHTML+=`<p class="text-danger m-0">Number 2 input ${e.target.elements.numberTwo.value} is not a valid number</p>`;}
+  if(isNaN(e.target.elements.numberOne.value) || e.target.elements.numberOne.value.length===0){document.getElementById("output").innerHTML+=`<p class="text-danger m-0">Number 1 input ${e.target.elements.numberOne.value} is not a valid number</p>`;}
+  
+  if(isNaN(e.target.elements.numberTwo.value) || e.target.elements.numberTwo.value.length===0){document.getElementById("output").innerHTML+=`<p class="text-danger m-0">Number 2 input ${e.target.elements.numberTwo.value} is not a valid number</p>`;}
 
-  if(isNaN(numOne)){document.getElementById("output").innerHTML+=`<p class="text-danger m-0">Number 1 input ${e.target.elements.numberOne.value} is not a valid number</p>`;}
+  if((numOne < 2 || numOne > 100)&& e.target.elements.numberOne.value.length!==0){document.getElementById("output").innerHTML+=`<p class="text-danger m-0">Number 1 input ${numOne} is not in the range of 2 and 100</p>`;}
 
-  if(numOne < 2 || numOne > 100){document.getElementById("output").innerHTML+=`<p class="text-danger m-0">Number 1 input ${numOne} is not in the range of 2 and 100</p>`;}
-
-  if(numTwo < 2 || numTwo > 100){document.getElementById("output").innerHTML+=`<p class="text-danger m-0">Number 2 input ${numTwo} is not in the range of 2 and 100</p>`;}
+  if((numTwo < 2 || numTwo > 100)&& e.target.elements.numberTwo.value.length!==0){document.getElementById("output").innerHTML+=`<p class="text-danger m-0">Number 2 input ${numTwo} is not in the range of 2 and 100</p>`;}
   
   else if(numOne >= 2 && numOne <= 100 && numTwo >= 2 && numTwo <= 100){
     for(var i = small; i<=large;i+=1){
