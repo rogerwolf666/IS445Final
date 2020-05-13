@@ -8,18 +8,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="container-fluid rounded align-middle text-center bg-info text-white mb-3 p-5">
-    <h1>Midterm Exam</h1>
-    <p>Find all prime numbers between two numbers</p>
+  <section class="container-fluid rounded align-middle text-center bg-info mb-3 p-5">
+    <h1 class="text-danger">Final Exam</h1>
+    <p class="text-light">Find all even numbers between two numbers</p>
   </section>
   <form>
-    <div id="inputOrder" class="row m-0">
+    <div id="inputOrder" class="row m-0 text-success">
     <div id="firstInput" class="col-12 col-md mb-3 pl-3">
       <div>
         <label for="numberOne">Number 1:</label>
       </div>
       <div>
-        <input type="text" name="numberOne" id="numberOne" required class="w-100 pl-2">
+        <input type="text" name="numberOne" id="numberOne" required class="w-100 pl-2 border border-success">
       </div>
     </div>
     <div id="secondInput" class="col-12 col-md mb-3 pl-3">
@@ -27,15 +27,16 @@
       <label for="numberTwo">Number 2:</label>
     </div>
     <div>
-      <input type="text" name="numberTwo" id="numberTwo" required class="w-100 pl-2">
+      <input type="text" name="numberTwo" id="numberTwo" required class="w-100 pl-2 border border-success">
     </div>
   </div>
 </div>
   <div id="button" class="pl-3">
-    <input type="submit" value="Submit" class="btn btn-outline-primary mb-3">
+    <input type="submit" value="Submit" class="btn btn-outline-warning mb-3">
   </div>
   </form>
-<div id="output"></div>
+<h3 class="col-12 m-0 text-success">Calculation Result:</h3>
+  <div id="output" class="container col-12 m-3 p-5 rounded border"></div>
   <script src="app.js"></script>
 </body>
 </html>
